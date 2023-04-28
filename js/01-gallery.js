@@ -23,17 +23,17 @@ for (let galleryItem of galleryItems) {
 //EVENTO PARA USAR LIGHTBOX
 gallery.addEventListener("click", galleryClick);
 
-function galleryClick(event){
+function galleryClick(event) {
   event.preventDefault();
 
-if(event.target.nodeName !== "IMG"){
-  return;
-}
+  if (event.target.nodeName !== "IMG") {
+    return;
+  }
 
-const modalImage = event.target.getAttribute("data-source");
-const instance = basicLightbox.create(`
+  const modalImage = event.target.getAttribute("data-source");
+  const instance = basicLightbox.create(`
     <img src="${modalImage}">
-`)
+`);
 
-instance.show()
+  instance.show();
 }

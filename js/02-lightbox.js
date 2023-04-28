@@ -1,4 +1,4 @@
-import { galleryItems } from './gallery-items.js';
+import { galleryItems } from "./gallery-items.js";
 // Change code below this line
 const gallery = document.querySelector(".gallery");
 
@@ -9,7 +9,7 @@ for (let galleryItem of galleryItems) {
   listItem.classList.add("gallery__item");
 
   //Se crea la etiqueta link y sus atributos
-  const link = document.createElement("a")
+  const link = document.createElement("a");
   link.href = galleryItem.original;
   link.classList.add("gallery__link");
 
@@ -27,10 +27,10 @@ for (let galleryItem of galleryItems) {
 
 gallery.addEventListener("click", galleryLightBox);
 
-function galleryLightBox(event){
+function galleryLightBox(event) {
   event.preventDefault();
 
-  const lightbox = new SimpleLightbox('.gallery a', {
+  const lightbox = new SimpleLightbox(".gallery a", {
     captionDelay: 250,
   });
 }
